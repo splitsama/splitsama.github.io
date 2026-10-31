@@ -43,7 +43,7 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 40px}
 <main class="wrap">
 <section class="card">
   <h2>About this policy</h2>
-  <p>SplitSama has no ads, and your expenses are end-to-end encrypted: only the people you share them with can read them, not us. This policy explains what the SplitSama app for Android and iOS (app ID <code>com.cadence.splitsama</code>) collects, why, and the choices you have.</p>
+  <p>SplitSama has no ads, and your expenses are end-to-end encrypted: only the people you share them with can read them, not us. This policy explains what the SplitSama app for Android (app ID <code>com.cadence.splitsama</code>) collects, why, and the choices you have.</p>
   <p>SplitSama is made by SplitSama, an independent developer ("we", "us"). Questions about privacy: <a href="mailto:splitsama@gmail.com">splitsama@gmail.com</a>.</p>
   <p>By using SplitSama you agree to this policy and to our <a href="../terms/">Terms of Service</a>.</p>
 </section>
@@ -60,7 +60,7 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 40px}
     <tr><td>Personal (self) expenses</td><td>Bills you track only for yourself</td><td>Your phone; encrypted copies for your own other phones and in your backup</td><td>Only you</td></tr>
     <tr><td>Device keys</td><td>A signing key, the keys for each group, and a list of your signed-in phones</td><td>Your phone (secure storage); encrypted in your backup</td><td>Only you</td></tr>
     <tr><td>Backup</td><td>An encrypted copy of your keys and data</td><td>Your own Google Drive, in a hidden app folder; or a backup file you save yourself</td><td>Only you (see "Backups")</td></tr>
-    <tr><td>Subscription status</td><td>Whether SplitSama Pro is active, renewal dates, a purchase reference, and a random customer ID</td><td>Google Play or the App Store, and RevenueCat</td><td>Us and RevenueCat, to unlock Pro</td></tr>
+    <tr><td>Subscription status</td><td>Whether SplitSama Pro is active, renewal dates, a purchase reference, and a random customer ID</td><td>Google Play and RevenueCat</td><td>Us and RevenueCat, to unlock Pro</td></tr>
     <tr><td>Crash reports</td><td>Error messages, app version, device model and operating system</td><td>Sentry</td><td>Us, to fix bugs</td></tr>
     <tr><td>Device push token</td><td>A token that lets your phone get a "something changed" ping</td><td>The sync relay and Expo's push service, until you turn notifications off or the token stops working</td><td>Us and Expo, to deliver pings; it contains no expense data</td></tr>
     <tr><td>IP address</td><td>Your device's internet address when it connects</td><td>Processed by the sync relay when your phone connects; not stored with your data</td><td>Us, to deliver data and limit abuse</td></tr>
@@ -73,9 +73,9 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 40px}
   <ul>
     <li><strong>End-to-end encrypted.</strong> Changes are encrypted on your phone before they are sent. Our relay, which runs on Cloudflare, stores only encrypted data. It cannot see names, amounts, groups or who wrote what.</li>
     <li><strong>What the relay processes.</strong> As expected for a relay, it processes your device's IP address and device push token. The IP address is used to deliver data and for short, per-minute limits that stop floods of requests; the relay does not keep request logs or store IP addresses with your data. The push token is kept with the encrypted mailboxes you belong to so the relay can ping your phone, and is removed when you turn notifications off or the token stops working.</li>
-    <li><strong>Invite links and QR codes.</strong> In an open group, anyone with the link or QR code can join. With "Approve new members" on, people can only ask to join until a member approves them.</li>
+    <li><strong>Invite links and QR codes.</strong> In an open group, anyone with the link or QR code can join. With "Approve new members" on, people can only ask to join until a member approves them. Invite links open a page on our website, splitsama.app. The invite itself, which includes your name and the group's name, is in the part of the link that browsers do not send to any server, so the website never receives it.</li>
     <li><strong>Personal inboxes.</strong> Messages between people, such as non-group expenses, reminders and invitations, go to an encrypted inbox only the recipient can read. Inbox messages are deleted after 90 days.</li>
-    <li><strong>Notifications.</strong> When something changes, the relay sends your phone a ping with no content, through Expo and Apple or Google's push services. Your phone writes the notification text itself.</li>
+    <li><strong>Notifications.</strong> When something changes, the relay sends your phone a ping with no content, through Expo and Google's push services. Your phone writes the notification text itself.</li>
     <li><strong>Exchange rates and settings.</strong> The app downloads daily currency rates through our relay and app settings from Google Firebase. These requests send nothing about you or your expenses.</li>
     <li><strong>Network data.</strong> Like any internet service, Cloudflare, Google, Expo, RevenueCat and Sentry see your device's IP address when it connects. They handle it under their own privacy policies.</li>
   </ul>
@@ -95,7 +95,7 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 40px}
   <ul>
     <li><strong>Camera.</strong> Used to scan invite QR codes and receipts. The microphone is not used.</li>
     <li><strong>Photos.</strong> Used only when you pick a receipt image from your library.</li>
-    <li><strong>Receipts.</strong> A receipt is scanned and read on your phone (Apple Vision on iOS; Google's on-device document scanner and ML Kit on Android); its amounts go into the expense and the photo is deleted. Receipt photos are never uploaded or stored.</li>
+    <li><strong>Receipts.</strong> A receipt is scanned and read on your phone (using Google's on-device document scanner and ML Kit); its amounts go into the expense and the photo is deleted. Receipt photos are never uploaded or stored.</li>
     <li><strong>Contacts.</strong> Used only when you tap "Choose from contacts", to read the one contact you pick. We never upload your contact list.</li>
     <li><strong>Messages you paste.</strong> When you paste a bank, card or UPI message to make an expense, it is read on your phone and not uploaded.</li>
     <li><strong>Notifications.</strong> Used for group changes, comments, reminders and budget alerts. You can turn them off in the app or in your phone's settings.</li>
@@ -109,8 +109,8 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 40px}
     <tr><th>Service</th><th>What it receives</th><th>Purpose</th></tr>
     <tr><td>Google (Sign-In, Drive, Firebase)</td><td>Your sign-in; your encrypted backup; requests for app settings</td><td>Sign-in, backups and feature settings</td></tr>
     <tr><td>Cloudflare</td><td>Encrypted sync data, backup-key requests, IP addresses and device push tokens</td><td>Running the sync relay</td></tr>
-    <tr><td>Expo, Apple and Google push services</td><td>Push token and content-free pings</td><td>Notifications</td></tr>
-    <tr><td>RevenueCat, Google Play, App Store</td><td>Random customer ID, purchase and subscription status</td><td>SplitSama Pro purchases</td></tr>
+    <tr><td>Expo and Google push services</td><td>Push token and content-free pings</td><td>Notifications</td></tr>
+    <tr><td>RevenueCat and Google Play</td><td>Random customer ID, purchase and subscription status</td><td>SplitSama Pro purchases</td></tr>
     <tr><td>Sentry (stored in the EU)</td><td>Crash and error reports, cleaned on your phone first</td><td>Fixing bugs</td></tr>
   </table></div>
   <p>Crash reports never include your name, email, people, expense text, screenshots or screen recordings. You can turn crash reports off in Account.</p>
@@ -119,7 +119,7 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 40px}
 
 <section class="card">
   <h2>Payments</h2>
-  <p>Settle-up buttons open your payment app (for example UPI or PayPal) with the details filled in. Payments happen in that app; SplitSama never sees or stores card or bank details. SplitSama Pro is paid through Google Play or the App Store, which handle your payment details.</p>
+  <p>Settle-up buttons open your payment app (for example UPI or PayPal) with the details filled in. Payments happen in that app; SplitSama never sees or stores card or bank details. SplitSama Pro is paid through Google Play, which handles your payment details.</p>
 </section>
 
 <section class="card">
@@ -129,7 +129,7 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 40px}
     <li><strong>Log out or sign out a phone.</strong> Logging out erases SplitSama's data on that phone, and your backup stays in Drive. From Devices, you can sign out another of your phones; it erases its data the next time it connects.</li>
     <li><strong>On friends' phones.</strong> Expenses you shared stay on the phones of the people you shared them with, as in any shared ledger. You can delete expenses and comments you are part of. Deleting a group removes it for everyone in it.</li>
     <li><strong>On the relay.</strong> Encrypted group data stays on the relay so members, including new ones, can sync. If nobody uses a group for 12 months, its data is removed from the relay; members' phones still have it and send it again if the group is used later. Inbox messages expire after 90 days. We cannot read relay data or tell whose it is.</li>
-    <li><strong>Subscription.</strong> Deleting your account does not cancel SplitSama Pro. Cancel it in Google Play or the App Store; billing records are kept by them as the law requires.</li>
+    <li><strong>Subscription.</strong> Deleting your account does not cancel SplitSama Pro. Cancel it in Google Play; billing records are kept by Google as the law requires.</li>
   </ul>
   <p>Step-by-step instructions are on our <a href="../delete-account/">account deletion page</a>. If you can no longer open the app, email <a href="mailto:splitsama@gmail.com">splitsama@gmail.com</a> and we will help. You can also remove SplitSama's backup from Google Drive in Drive settings under Manage apps, and remove its access in your Google account settings.</p>
   <p>Depending on where you live, you may have the right to see, correct or delete your information, or to complain to a data protection authority. Contact us to use these rights.</p>
