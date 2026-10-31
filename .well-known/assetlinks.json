@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.cadence.splitsama",
+      "sha256_cert_fingerprints": [
+        "2F:08:8B:61:89:63:43:37:E9:24:80:D2:8A:70:B7:A0:57:9D:B6:BD:43:9E:F2:1B:73:45:17:E8:93:B1:23:19",
+        "61:2A:71:88:69:14:53:17:9E:46:D3:B2:65:1D:7B:84:8E:F3:9A:E8:CE:51:0C:E8:D8:79:25:13:1E:8A:0A:79"
+      ]
+    }
+  }
+]

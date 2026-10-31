@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join me on SplitSama</title>
+<meta name="description" content="You've been invited to split expenses on SplitSama.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#1F4FD1">
+<link rel="icon" href="../assets/icon.png" type="image/png">
+<style>
+:root{--bg:#F4F6FB;--card:#fff;--ink:#0F172A;--mute:#5B6478;--line:#E2E7F0;--pri:#1F4FD1}
+@media (prefers-color-scheme:dark){:root{--bg:#0A0F1A;--card:#121A2A;--ink:#EEF2FA;--mute:#94A0B8;--line:#222D42;--pri:#6E9BFF}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:460px;margin:0 auto;padding:40px 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 22px;text-align:center}
+.card img{width:72px;height:72px;border-radius:18px}
+h1{font-size:1.5rem;line-height:1.25;letter-spacing:-.02em;margin:16px 0 6px}
+p{margin:0 0 14px;color:var(--mute)}
+.btn{display:block;background:var(--pri);color:#fff;font-weight:700;text-decoration:none;padding:14px;border-radius:14px;margin:18px 0 10px}
+@media (prefers-color-scheme:dark){.btn{color:#0A0F1A}}
+.hide{display:none}
+small{color:var(--mute)}
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <img src="../assets/icon.png" alt="" aria-hidden="true">
+    <h1 id="title">Join me on SplitSama</h1>
+    <p id="sub">Split bills with friends and groups. Private, end-to-end encrypted, no ads.</p>
+    <a class="btn hide" id="open">Open invite in SplitSama</a>
+    <a class="btn hide" id="store" href="https://play.google.com/store/apps/details?id=com.cadence.splitsama">Get SplitSama on Google Play</a>
+    <p class="hide" id="again"><small>Don't have the app? This button takes you to Google Play. After installing, tap the link you were sent again.</small></p>
+    <p class="hide" id="iphone"><small>SplitSama is on Android for now, and iPhone is coming later. Keep this link for when it's ready.</small></p>
+    <p class="hide" id="bad">This invite link is incomplete. Ask for a new one.</p>
+  </div>
+</main>
+<script>
+// The invite stays on this phone: it's after "#", which browsers don't send to any server, and this page loads
+// nothing from anywhere else. It's only read to show who it's from and to hand it to the app.
+(function () {
+  var show = function (id) { document.getElementById(id).classList.remove('hide'); };
+  var m = location.hash.match(/[#&]d=([A-Za-z0-9_-]+)/);
+  if (!m) { show('bad'); show('store'); return; }
+  var code = m[1], invite = null;
+  try {
+    var bin = atob(code.replace(/-/g, '+').replace(/_/g, '/'));
+    var bytes = Uint8Array.from(bin, function (c) { return c.charCodeAt(0); });
+    invite = JSON.parse(new TextDecoder().decode(bytes));
+  } catch (e) { /* still try the app: it checks invites properly */ }
+  if (invite && typeof invite.inviterName === 'string') {
+    var group = invite.group && typeof invite.group.name === 'string' ? invite.group.name : null;
+    // textContent: names are shown as text, never as HTML.
+    document.getElementById('title').textContent = invite.inviterName + (group ? ' invited you to “' + group + '”' : ' invited you');
+  }
+  var ua = navigator.userAgent;
+  if (/Android/i.test(ua)) {
+    // Opens the app if it's installed, otherwise Google Play. Nothing leaves the phone.
+    var store = document.getElementById('store').href;
+    var open = document.getElementById('open');
+    open.href = 'intent://invite?d=' + code + '#Intent;scheme=splitsama;package=com.cadence.splitsama;S.browser_fallback_url=' + encodeURIComponent(store) + ';end';
+    show('open'); show('again');
+  } else if (/iPhone|iPad|iPod/i.test(ua)) {
+    show('iphone');
+  } else {
+    show('store');
+  }
+})();
+</script>
+</body>
+</html>
