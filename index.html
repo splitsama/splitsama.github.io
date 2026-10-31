@@ -18,7 +18,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-app
 .hero h1{font-size:clamp(2.2rem,7vw,3.4rem);line-height:1.05;letter-spacing:-.03em;margin:22px 0 12px}
 .hero h1 span{color:#6E9BFF}
 .hero p{font-size:1.15rem;color:#C9D3EA;max-width:560px;margin:0 0 26px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#161E30;font-weight:700;padding:12px 20px;border-radius:999px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#161E30;font-weight:700;padding:12px 20px;border-radius:999px;text-decoration:none}
 .note{font-size:.9rem;color:#94A0B8;margin:12px 0 0}
 .shots{display:flex;gap:16px;overflow-x:auto;padding:40px 20px 44px;margin:0 -20px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
 .shots img{flex:none;width:220px;height:auto;aspect-ratio:9/16;border-radius:18px;scroll-snap-align:start;box-shadow:0 10px 30px rgba(0,0,0,.4)}
@@ -40,8 +40,8 @@ footer a{color:var(--pri)}
   <img class="logo" src="assets/icon.png" alt="SplitSama icon">
   <h1>Split bills.<br><span>Stay friends.</span></h1>
   <p>SplitSama makes sharing costs with friends, flatmates and trips easy. Free and unlimited, with no ads, and end-to-end encrypted.</p>
-  <span class="badge">Coming soon to Google Play and the App Store</span>
-  <p class="note">For Android and iOS</p>
+  <a class="badge" href="https://play.google.com/store/apps/details?id=com.cadence.splitsama">▶ Get it on Google Play</a>
+  <p class="note">For Android</p>
   <div class="shots" aria-label="App screenshots">
     <img src="assets/01-dashboard.jpg" alt="Dashboard showing overall balance and this month's spending" loading="lazy">
     <img src="assets/03-group.jpg" alt="A group with members and balances" loading="lazy">
