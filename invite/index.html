@@ -7,6 +7,16 @@
 <meta name="description" content="You've been invited to split expenses on SplitSama.">
 <meta name="robots" content="noindex">
 <meta name="referrer" content="no-referrer">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SplitSama">
+<meta property="og:title" content="Join me on SplitSama">
+<meta property="og:description" content="You've been invited to split expenses on SplitSama.">
+<meta property="og:url" content="https://splitsama.app/invite/">
+<meta property="og:image" content="https://splitsama.app/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SplitSama: split bills with friends and groups">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1F4FD1">
 <link rel="icon" href="../assets/icon.png" type="image/png">
 <style>
@@ -49,7 +59,13 @@ small{color:var(--mute)}
   try {
     var bin = atob(code.replace(/-/g, '+').replace(/_/g, '/'));
     var bytes = Uint8Array.from(bin, function (c) { return c.charCodeAt(0); });
-    invite = JSON.parse(new TextDecoder().decode(bytes));
+    if (bytes[0] === 2) { // packed: see encodeInvite in the app. Keys come first, then the text fields as JSON.
+      var hasGroup = bytes[1] & 1, ownedId = bytes[1] & 4;
+      var text = JSON.parse(new TextDecoder().decode(bytes.slice(66 + (ownedId ? 48 : 0) + (hasGroup ? 32 : 0))));
+      invite = { inviterName: text[0], group: hasGroup ? { name: text[1] } : null };
+    } else {
+      invite = JSON.parse(new TextDecoder().decode(bytes));
+    }
   } catch (e) { /* still try the app: it checks invites properly */ }
   if (invite && typeof invite.inviterName === 'string') {
     var group = invite.group && typeof invite.group.name === 'string' ? invite.group.name : null;
