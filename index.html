@@ -49,10 +49,13 @@ h2{font-size:1.6rem;letter-spacing:-.01em;margin:0 0 20px}
 .tag{display:inline-block;background:var(--soft);color:var(--pri);font-size:.8rem;font-weight:700;padding:2px 10px;border-radius:999px;margin-bottom:8px}
 footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 20px 40px;text-align:center;color:var(--mute);font-size:.9rem}
 footer a{color:var(--pri)}
+.topnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:26px;font-size:.95rem}
+.topnav a{color:#C9D3EA;text-decoration:none}
 </style>
 </head>
 <body>
 <header class="hero"><div class="wrap">
+  <nav class="topnav" aria-label="Main"><a href="how-it-works/">How It Works</a><a href="features/">Features</a><a href="pro/">Pro</a><a href="about/">About</a></nav>
   <img class="logo" src="assets/icon.png" alt="SplitSama split bills app icon">
   <h1>Split bills.<br><span>Stay friends.</span></h1>
   <p>SplitSama is a free split bills app that makes sharing costs with friends, flatmates and trips easy. Unlimited, with no ads, and end-to-end encrypted.</p>
@@ -68,7 +71,7 @@ footer a{color:var(--pri)}
 
 <main class="wrap">
 <section>
-  <h2>A free bill splitting app, with no limits</h2>
+  <h2><a href="features/" style="color:inherit;text-decoration:none">A free bill splitting app, with no limits</a></h2>
   <div class="grid">
     <div class="card"><h3>No caps, no ads</h3><p>Add as many expenses and groups as you like, every day.</p></div>
     <div class="card"><h3>Split any way</h3><p>Equally, by exact amounts, percentages, shares or adjustments, with several payers if needed.</p></div>
@@ -83,7 +86,7 @@ footer a{color:var(--pri)}
 </section>
 
 <section>
-  <h2>SplitSama Pro</h2>
+  <h2><a href="pro/" style="color:inherit;text-decoration:none">SplitSama Pro</a></h2>
   <div class="grid">
     <div class="card"><span class="tag">Pro</span><h3>Smarter entry</h3><ul><li>Scan receipts and split item by item</li><li>Open bills: everyone picks the items they had (try free in 2 groups)</li><li>Repeating expenses and default splits</li></ul></div>
     <div class="card"><span class="tag">Pro</span><h3>Trips and budgets</h3><ul><li>Trip mode with daily totals and a shareable recap</li><li>Shared budgets with alerts</li><li>Live currency conversion</li></ul></div>
@@ -117,6 +120,7 @@ footer a{color:var(--pri)}
 </main>
 
 <footer>
+  <a href="how-it-works/">How It Works</a> · <a href="features/">Features</a> · <a href="pro/">Pro</a> · <a href="about/">About</a><br>
   <a href="privacy/">Privacy Policy</a> · <a href="terms/">Terms of Service</a> · <a href="delete-account/">Delete account</a> · <a href="mailto:splitsama@gmail.com">Support</a>
   <p>© 2026 SplitSama</p>
 </footer>
