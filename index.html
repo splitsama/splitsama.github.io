@@ -23,106 +23,61 @@
 <script type="application/ld+json">
 [{"@context": "https://schema.org", "@type": "WebSite", "name": "SplitSama", "url": "https://splitsama.app/"}, {"@context": "https://schema.org", "@type": "MobileApplication", "name": "SplitSama", "url": "https://splitsama.app/", "description": "A free split bills app for friends, flatmates and trips, with no ads and end-to-end encryption.", "applicationCategory": "FinanceApplication", "operatingSystem": "Android", "image": "https://splitsama.app/assets/icon.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an expense splitting app?", "acceptedAnswer": {"@type": "Answer", "text": "An expense splitting app records shared costs and works out who owes whom. SplitSama is a free expense splitting app for friends, flatmates and trips: you add bills as they happen, and it keeps every balance up to date."}}, {"@type": "Question", "name": "How do I split a bill with friends?", "acceptedAnswer": {"@type": "Answer", "text": "Add the expense in SplitSama, choose who paid and who shares it, and split it equally, by exact amounts, percentages or shares. SplitSama keeps a running balance, so everyone can see who owes whom."}}, {"@type": "Question", "name": "Is SplitSama free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Splitting is free and unlimited, with no ads. An optional Pro plan adds extras such as receipt scanning, trip mode and budgets."}}, {"@type": "Question", "name": "Can I split bills with flatmates and on trips?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Make a group for your flat or trip, add expenses as they happen, and SplitSama works out the fewest payments needed to settle up."}}, {"@type": "Question", "name": "Does it work with UPI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Settle up opens UPI with the amount filled in. It also works with PayPal, Venmo, Cash App and Revolut, or you can record a cash payment."}}, {"@type": "Question", "name": "Can I move from Splitwise?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. With Pro, you can import a group from a Splitwise export."}}, {"@type": "Question", "name": "Are my expenses private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Shared expenses are end-to-end encrypted, so only the people in a group can read them."}}, {"@type": "Question", "name": "Does SplitSama work offline?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can add expenses without a connection, and they sync when you're back online."}}, {"@type": "Question", "name": "Is there an iPhone app?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. SplitSama is for Android for now."}}]}]
 </script>
-<style>
-:root{--bg:#F4F6FB;--card:#fff;--ink:#0F172A;--mute:#5B6478;--line:#E2E7F0;--soft:#EBF0FA;--pri:#1F4FD1}
-@media (prefers-color-scheme:dark){:root{--bg:#0A0F1A;--card:#121A2A;--ink:#EEF2FA;--mute:#94A0B8;--line:#222D42;--soft:#18223A;--pri:#6E9BFF}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.hero{background:radial-gradient(ellipse at 70% 0%,#2A3B66 0%,#161E30 55%,#0D1220 100%);color:#fff;padding:56px 0 0;overflow:hidden}
-.hero .logo{width:88px;height:88px;border-radius:22px;box-shadow:0 8px 28px rgba(80,130,255,.35)}
-.hero h1{font-size:clamp(2.2rem,7vw,3.4rem);line-height:1.05;letter-spacing:-.03em;margin:22px 0 12px}
-.hero h1 span{color:#6E9BFF}
-.hero p{font-size:1.15rem;color:#C9D3EA;max-width:560px;margin:0 0 26px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#161E30;font-weight:700;padding:12px 20px;border-radius:999px;text-decoration:none}
-.note{font-size:.9rem;color:#94A0B8;margin:12px 0 0}
-.shots{display:flex;gap:16px;overflow-x:auto;padding:40px 20px 44px;margin:0 -20px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-.shots img{flex:none;width:220px;height:auto;aspect-ratio:9/16;border-radius:18px;scroll-snap-align:start;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-section{padding:48px 0 8px}
-h2{font-size:1.6rem;letter-spacing:-.01em;margin:0 0 20px}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
-.card h3{margin:0 0 6px;font-size:1.05rem;color:var(--pri)}
-.card p{margin:0;color:var(--mute)}
-.card ul{margin:10px 0 0;padding-left:20px;color:var(--mute)}
-.card li{margin:0 0 4px}
-.tag{display:inline-block;background:var(--soft);color:var(--pri);font-size:.8rem;font-weight:700;padding:2px 10px;border-radius:999px;margin-bottom:8px}
-footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 20px 40px;text-align:center;color:var(--mute);font-size:.9rem}
-footer a{color:var(--pri)}
-.topnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:26px;font-size:.95rem}
-.topnav a{color:#C9D3EA;text-decoration:none}
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<header class="hero"><div class="wrap">
-  <nav class="topnav" aria-label="Main"><a href="how-it-works/">How It Works</a><a href="features/">Features</a><a href="pro/">Pro</a><a href="about/">About</a></nav>
-  <img class="logo" src="assets/icon.png" alt="SplitSama split bills app icon">
-  <h1>Split bills.<br><span>Stay friends.</span></h1>
-  <p>SplitSama is a free split bills app that makes sharing costs with friends, flatmates and trips easy. Unlimited, with no ads, and end-to-end encrypted.</p>
-  <a class="badge" href="https://play.google.com/store/apps/details?id=com.cadence.splitsama"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.6 2.4 13 12 3.6 21.6c-.4-.2-.6-.6-.6-1.1V3.5c0-.5.2-.9.6-1.1z"/><path fill="#34A853" d="M16.3 8.7 13 12 3.6 2.4c.3-.1.7-.1 1 .1l11.7 6.2z"/><path fill="#EA4335" d="M16.3 15.3 4.6 21.5c-.3.2-.7.2-1 .1L13 12l3.3 3.3z"/><path fill="#FBBC04" d="M20.4 10.9c.9.5.9 1.7 0 2.2l-4.1 2.2L13 12l3.3-3.3 4.1 2.2z"/></svg>Get it on Google Play</a>
-  <div class="shots" aria-label="App screenshots">
-    <img src="assets/01-dashboard.jpg" alt="Dashboard showing overall balance and this month's spending" loading="lazy">
-    <img src="assets/03-group.jpg" alt="A group showing who owes whom after splitting bills" loading="lazy">
-    <img src="assets/05-expense.jpg" alt="Adding an expense and choosing how to split the bill" loading="lazy">
-    <img src="assets/06-settle.jpg" alt="Settling up a bill with a payment app such as UPI" loading="lazy">
-    <img src="assets/07-insights.jpg" alt="Spending charts and insights" loading="lazy">
-  </div>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="./"><img src="assets/icon.png" alt="SplitSama split bills app icon" width="32" height="32">SplitSama</a>
+  <nav class="nav" aria-label="Main"><a href="how-it-works/">How It Works</a><a href="features/">Features</a><a href="pro/">Pro</a><a href="about/">About</a></nav>
+  <a class="btn small" href="https://play.google.com/store/apps/details?id=com.cadence.splitsama">Get the app</a>
 </div></header>
-
-<main class="wrap">
-<section>
-  <h2><a href="features/" style="color:inherit;text-decoration:none">A free bill splitting app, with no limits</a></h2>
-  <div class="grid">
-    <div class="card"><h3>No caps, no ads</h3><p>Add as many expenses and groups as you like, every day.</p></div>
-    <div class="card"><h3>Split any way</h3><p>Equally, by exact amounts, percentages, shares or adjustments, with several payers if needed.</p></div>
-    <div class="card"><h3>Simplify debts</h3><p>SplitSama works out the fewest payments needed to settle up a whole group.</p></div>
-    <div class="card"><h3>Settle up in a tap</h3><p>Open UPI, PayPal, Venmo or Cash App with the amount filled in, open Revolut to the right person, or record cash.</p></div>
-    <div class="card"><h3>Dashboard</h3><p>Your overall balance, this month's spending and who owes whom, at a glance.</p></div>
-    <div class="card"><h3>Personal expenses</h3><p>Track rent and bills just for yourself, privately, by month and category.</p></div>
-    <div class="card"><h3>Groups your way</h3><p>Invite by link or QR code, approve new members, comment on expenses, and get reminders and notifications.</p></div>
-    <div class="card"><h3>58 currencies, offline</h3><p>Each expense keeps its own currency, and everything works offline.</p></div>
-    <div class="card"><h3>Export anytime</h3><p>Export all your expenses to Excel, PDF or CSV, or import a group from Splitwise with Pro.</p></div>
+<main>
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Split bills.<br><span>Stay friends.</span></h1>
+    <p class="lede">SplitSama is a free split bills app that makes sharing costs with friends, flatmates and trips easy. Unlimited, with no ads, and end-to-end encrypted.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cadence.splitsama"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.6 2.4 13 12 3.6 21.6c-.4-.2-.6-.6-.6-1.1V3.5c0-.5.2-.9.6-1.1z"/><path fill="#34A853" d="M16.3 8.7 13 12 3.6 2.4c.3-.1.7-.1 1 .1l11.7 6.2z"/><path fill="#EA4335" d="M16.3 15.3 4.6 21.5c-.3.2-.7.2-1 .1L13 12l3.3 3.3z"/><path fill="#FBBC04" d="M20.4 10.9c.9.5.9 1.7 0 2.2l-4.1 2.2L13 12l3.3-3.3 4.1 2.2z"/></svg>Get it on Google Play</a>
+    <ul class="checks"><li>Free and unlimited</li><li>No ads</li><li>End-to-end encrypted</li></ul>
   </div>
-</section>
+  <div><img class="shot" src="assets/shots/dashboard.jpg" alt="SplitSama dashboard showing overall balance and this month's spending" width="640" height="1064"></div>
+</div></section>
 
-<section>
-  <h2><a href="pro/" style="color:inherit;text-decoration:none">SplitSama Pro</a></h2>
-  <div class="grid">
-    <div class="card"><span class="tag">Pro</span><h3>Smarter entry</h3><ul><li>Scan receipts and split item by item</li><li>Open bills: everyone picks the items they had (try free in 2 groups)</li><li>Repeating expenses and default splits</li></ul></div>
-    <div class="card"><span class="tag">Pro</span><h3>Trips and budgets</h3><ul><li>Trip mode with daily totals and a shareable recap</li><li>Shared budgets with alerts</li><li>Live currency conversion</li></ul></div>
-    <div class="card"><span class="tag">Pro</span><h3>Insights and control</h3><ul><li>Charts, insights and search</li><li>Group export to Excel and PDF</li><li>Owner-only groups and Splitwise import</li></ul></div>
-  </div>
-</section>
+<section class="block"><div class="wrap">
+  <div class="head"><h2>A free bill splitting app, with no limits</h2><p>Add as many expenses and groups as you like, every day.</p></div>
+  <div class="row"><div class="media"><img class="shot" src="assets/shots/groups.jpg" alt="A list of groups showing what each one owes" width="640" height="1064" loading="lazy"></div><div><h3>Trips, flats, every group</h3><p>Keep each trip, flat and friend group in its own place, so costs never get mixed up. Invite people by link or QR code, and they can join in seconds. You can see what you owe or are owed in every group at a glance, without digging through chats.</p></div></div>
+  <div class="row flip"><div class="media"><img class="shot" src="assets/shots/expense.jpg" alt="Adding an expense and choosing how to split the bill" width="640" height="1064" loading="lazy"></div><div><h3>Split any way</h3><p>Real bills are rarely even, so split them equally, by exact amounts, percentages, shares or adjustments. If two people paid for dinner, add them both as payers. Everyone pays their fair share, and nobody has to do the maths.</p></div></div>
+  <div class="row"><div class="media"><img class="shot" src="assets/shots/settle.jpg" alt="Settling up a bill with a payment app such as UPI" width="640" height="1064" loading="lazy"></div><div><h3>Settle up in a tap</h3><p>When it's time to pay, SplitSama opens UPI, PayPal, Venmo or Cash App with the amount filled in, or opens Revolut to the right person. Paid in cash? Just record it. No typing amounts, and no awkward "how much was it again?" messages.</p></div></div>
+  <div class="row flip"><div class="media"><img class="shot" src="assets/shots/personal.jpg" alt="Personal expenses tracked by month" width="640" height="1064" loading="lazy"></div><div><h3>Personal expenses</h3><p>Track rent, electricity and other bills that are yours alone, by month and category. They stay private and are never shared with a group. You get your own spending and your shared costs in one app.</p></div></div>
+  <p style="margin-top:40px"><a class="more" href="features/">See all features →</a></p>
+</div></section>
 
-<section>
-  <h2>Private by design</h2>
-  <div class="grid">
-    <div class="card"><h3>End-to-end encrypted</h3><p>Only the people in a group can read it. Not even we can.</p></div>
-    <div class="card"><h3>Backed up to your Drive</h3><p>Sign in with Google and an encrypted backup goes to your own Google Drive every day.</p></div>
-    <div class="card"><h3>Receipts never stored</h3><p>Receipts are read on your phone and the photo is deleted. No ads, no tracking.</p></div>
-  </div>
-</section>
+<section class="block alt"><div class="wrap">
+  <div class="head"><h2>Everything else you need</h2></div>
+  <div class="grid"><div class="card"><h3>Simplify debts</h3><p>SplitSama works out the fewest payments needed to settle up a whole group.</p></div><div class="card"><h3>58 currencies, offline</h3><p>Each expense keeps its own currency, which is handy on trips abroad. Everything works offline, so you can add costs even with no signal.</p></div><div class="card"><h3>Reminders and comments</h3><p>Comment on expenses, and get reminders and notifications.</p></div><div class="card"><h3>Dashboard</h3><p>Your overall balance, this month's spending and who owes whom, at a glance.</p></div><div class="card"><h3>Export anytime</h3><p>Export all your expenses to Excel, PDF or CSV.</p></div><div class="card"><h3>Groups your way</h3><p>Approve new members before they join, so you always know who's in the group and can see its costs.</p></div></div>
+</div></section>
 
-<section>
-  <h2>Questions about splitting bills</h2>
-  <div class="grid">
-    <div class="card"><h3>What is an expense splitting app?</h3><p>An expense splitting app records shared costs and works out who owes whom. SplitSama is a free expense splitting app for friends, flatmates and trips: you add bills as they happen, and it keeps every balance up to date.</p></div>
-    <div class="card"><h3>How do I split a bill with friends?</h3><p>Add the expense in SplitSama, choose who paid and who shares it, and split it equally, by exact amounts, percentages or shares. SplitSama keeps a running balance, so everyone can see who owes whom.</p></div>
-    <div class="card"><h3>Is SplitSama free?</h3><p>Yes. Splitting is free and unlimited, with no ads. An optional Pro plan adds extras such as receipt scanning, trip mode and budgets.</p></div>
-    <div class="card"><h3>Can I split bills with flatmates and on trips?</h3><p>Yes. Make a group for your flat or trip, add expenses as they happen, and SplitSama works out the fewest payments needed to settle up.</p></div>
-    <div class="card"><h3>Does it work with UPI?</h3><p>Yes. Settle up opens UPI with the amount filled in. It also works with PayPal, Venmo, Cash App and Revolut, or you can record a cash payment.</p></div>
-    <div class="card"><h3>Can I move from Splitwise?</h3><p>Yes. With Pro, you can import a group from a Splitwise export.</p></div>
-    <div class="card"><h3>Are my expenses private?</h3><p>Yes. Shared expenses are end-to-end encrypted, so only the people in a group can read them.</p></div>
-    <div class="card"><h3>Does SplitSama work offline?</h3><p>Yes. You can add expenses without a connection, and they sync when you're back online.</p></div>
-    <div class="card"><h3>Is there an iPhone app?</h3><p>Not yet. SplitSama is for Android for now.</p></div>
-  </div>
-</section>
+<section class="block band"><div class="wrap">
+  <div class="head"><h2>Private by design</h2><p>Your expenses are nobody else's business.</p></div>
+  <div class="grid"><div class="card"><h3>End-to-end encrypted</h3><p>Only the people in a group can read it. Not even we can.</p></div><div class="card"><h3>Backed up to your Drive</h3><p>Sign in with Google and an encrypted backup goes to your own Google Drive every day.</p></div><div class="card"><h3>Receipts never stored</h3><p>Receipts are read on your phone and the photo is deleted. No ads, no tracking.</p></div></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="row"><div class="media"><img class="shot" src="assets/shots/insights.jpg" alt="Spending charts and insights" width="640" height="1064" loading="lazy"></div><div><span class="tag">Pro</span><h3>SplitSama Pro</h3><p>Splitting stays free. Pro saves time on bigger bills with receipt scanning and open bills, and helps you plan with trip mode and shared budgets. Charts and search show where your money goes.</p><a class="more" href="pro/">Explore Pro →</a></div></div>
+</div></section>
+
+<section class="block alt"><div class="wrap">
+  <div class="head center"><h2>Questions about splitting bills</h2></div>
+  <div class="faq"><details><summary>What is an expense splitting app?</summary><p>An expense splitting app records shared costs and works out who owes whom. SplitSama is a free expense splitting app for friends, flatmates and trips: you add bills as they happen, and it keeps every balance up to date.</p></details><details><summary>How do I split a bill with friends?</summary><p>Add the expense in SplitSama, choose who paid and who shares it, and split it equally, by exact amounts, percentages or shares. SplitSama keeps a running balance, so everyone can see who owes whom.</p></details><details><summary>Is SplitSama free?</summary><p>Yes. Splitting is free and unlimited, with no ads. An optional Pro plan adds extras such as receipt scanning, trip mode and budgets.</p></details><details><summary>Can I split bills with flatmates and on trips?</summary><p>Yes. Make a group for your flat or trip, add expenses as they happen, and SplitSama works out the fewest payments needed to settle up.</p></details><details><summary>Does it work with UPI?</summary><p>Yes. Settle up opens UPI with the amount filled in. It also works with PayPal, Venmo, Cash App and Revolut, or you can record a cash payment.</p></details><details><summary>Can I move from Splitwise?</summary><p>Yes. With Pro, you can import a group from a Splitwise export.</p></details><details><summary>Are my expenses private?</summary><p>Yes. Shared expenses are end-to-end encrypted, so only the people in a group can read them.</p></details><details><summary>Does SplitSama work offline?</summary><p>Yes. You can add expenses without a connection, and they sync when you're back online.</p></details><details><summary>Is there an iPhone app?</summary><p>Not yet. SplitSama is for Android for now.</p></details></div>
+</div></section>
+<section class="cta"><div class="wrap"><h2>Split your next bill with SplitSama</h2><p>Free and unlimited, with no ads.</p><a class="btn light" href="https://play.google.com/store/apps/details?id=com.cadence.splitsama"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.6 2.4 13 12 3.6 21.6c-.4-.2-.6-.6-.6-1.1V3.5c0-.5.2-.9.6-1.1z"/><path fill="#34A853" d="M16.3 8.7 13 12 3.6 2.4c.3-.1.7-.1 1 .1l11.7 6.2z"/><path fill="#EA4335" d="M16.3 15.3 4.6 21.5c-.3.2-.7.2-1 .1L13 12l3.3 3.3z"/><path fill="#FBBC04" d="M20.4 10.9c.9.5.9 1.7 0 2.2l-4.1 2.2L13 12l3.3-3.3 4.1 2.2z"/></svg>Get it on Google Play</a></div></section>
 </main>
-
-<footer>
-  <a href="how-it-works/">How It Works</a> · <a href="features/">Features</a> · <a href="pro/">Pro</a> · <a href="about/">About</a><br>
-  <a href="privacy/">Privacy Policy</a> · <a href="terms/">Terms of Service</a> · <a href="delete-account/">Delete account</a> · <a href="mailto:splitsama@gmail.com">Support</a>
-  <p>© 2026 SplitSama</p>
-</footer>
+<footer class="foot"><div class="wrap">
+  <div class="cols">
+    <div><a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32">SplitSama</a><p>Split bills with friends, flatmates and trips. Free and unlimited, with no ads.</p></div>
+    <div><h4>Product</h4><a href="how-it-works/">How It Works</a><a href="features/">Features</a><a href="pro/">Pro</a><a href="about/">About</a></div>
+    <div><h4>Help and legal</h4><a href="mailto:splitsama@gmail.com">Support</a><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a><a href="delete-account/">Delete account</a></div>
+  </div>
+  <p class="copy">© 2026 SplitSama</p>
+</div></footer>
 </body>
 </html>
