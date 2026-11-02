@@ -37,7 +37,7 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 40px}
 <header><div class="wrap">
   <div class="brand"><img src="../assets/icon.png" alt="" aria-hidden="true">SPLITSAMA</div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 31 October 2026</p>
+  <p class="updated">Last updated: 2 November 2026</p>
 </div></header>
 
 <main class="wrap">
@@ -71,8 +71,9 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 40px}
 <section class="card">
   <h2>How sync works</h2>
   <ul>
-    <li><strong>End-to-end encrypted.</strong> Changes are encrypted on your phone before they are sent. Our relay, which runs on Cloudflare, stores only encrypted data. It cannot see names, amounts, groups or who wrote what.</li>
+    <li><strong>End-to-end encrypted.</strong> Changes are encrypted on your phone before they are sent. Our relay, which runs on Cloudflare, stores only encrypted data and the usage counts described below. It cannot see names, amounts, groups or who wrote what.</li>
     <li><strong>What the relay processes.</strong> As expected for a relay, it processes your device's IP address and device push token. The IP address is used to deliver data and for short, per-minute limits that stop floods of requests; the relay does not keep request logs or store IP addresses with your data. The push token is kept with the encrypted mailboxes you belong to so the relay can ping your phone, and is removed when you turn notifications off or the token stops working.</li>
+    <li><strong>Usage counts.</strong> To protect the relay from abuse, it counts how much each sign-in pass writes in a day. A pass has a random ID and isn't linked to your account. The relay also counts how many passes each account requests in a day, using a code that changes daily and is reduced to totals when the day ends. Counts are deleted after 30 days.</li>
     <li><strong>Invite links and QR codes.</strong> In an open group, anyone with the link or QR code can join. With "Approve new members" on, people can only ask to join until a member approves them. Invite links open a page on our website, splitsama.app. The invite itself, which includes your name and the group's name, is in the part of the link that browsers do not send to any server, so the website never receives it.</li>
     <li><strong>Personal inboxes.</strong> Messages between people, such as non-group expenses, reminders and invitations, go to an encrypted inbox only the recipient can read. Inbox messages are deleted after 90 days.</li>
     <li><strong>Notifications.</strong> When something changes, the relay sends your phone a ping with no content, through Expo and Google's push services. Your phone writes the notification text itself.</li>
