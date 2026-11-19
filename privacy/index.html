@@ -35,10 +35,10 @@
   <a class="btn small" href="https://play.google.com/store/apps/details?id=com.cadence.splitsama">Get the app</a>
 </div></header>
 <main>
-<section class="page-head"><div class="wrap"><h1>Privacy Policy</h1><p class="lede">How SplitSama collects, uses and protects your information.</p><p class="updated">Last updated: 16 November 2026</p></div></section>
+<section class="page-head"><div class="wrap"><h1>Privacy Policy</h1><p class="lede">How SplitSama collects, uses and protects your information.</p><p class="updated">Last updated: 19 November 2026</p></div></section>
 <section class="block"><div class="wrap"><div class="prose legal">
 <h2>About this policy</h2>
-  <p>SplitSama has no ads, and your expenses are end-to-end encrypted: only the people you share them with can read them, not us. This policy explains what the SplitSama app for Android (app ID <code>com.cadence.splitsama</code>) collects, why, and the choices you have.</p>
+  <p>SplitSama has no ads, and your expenses are end-to-end encrypted: only the people you share them with can read them, not us. The one part that isn't is what an iPhone notification shows: a group's name and an expense's title (see "Notifications"). This policy explains what the SplitSama app for Android (app ID <code>com.cadence.splitsama</code>) collects, why, and the choices you have.</p>
   <p>SplitSama is made by SplitSama, an independent developer ("we", "us"). Questions about privacy: <a href="mailto:splitsama@gmail.com">splitsama@gmail.com</a>.</p>
   <p>By using SplitSama you agree to this policy and to our <a href="../terms/">Terms of Service</a>.</p>
 
@@ -56,6 +56,7 @@
     <tr><td>Backup</td><td>An encrypted copy of your keys and data</td><td>Your own Google Drive, in a hidden app folder; or a backup file you save yourself</td><td>Only you (see "Backups")</td></tr>
     <tr><td>Subscription status</td><td>Whether SplitSama Pro or a trip pass is active, renewal or end dates, a purchase reference, and a random customer ID</td><td>Google Play and RevenueCat</td><td>Us and RevenueCat, to unlock Pro. If you share Pro with a group or buy a trip pass for it, its members see that it came from you and until when.</td></tr>
     <tr><td>Crash reports</td><td>Error messages, app version, device model and operating system</td><td>Sentry</td><td>Us, to fix bugs</td></tr>
+    <tr><td>Notification notes</td><td>For each change worth a notification: what kind it was (such as a new expense or a payment), the group's name and the expense's title. Never names, amounts or comment text</td><td>The sync relay, only until the notification is sent (usually under a minute)</td><td>Expo and Apple, to show the notification on iPhones in your groups</td></tr>
     <tr><td>Device push token</td><td>A token that lets your phone get a "something changed" ping</td><td>The sync relay and Expo's push service, until you turn notifications off or the token stops working</td><td>Us and Expo, to deliver pings; it contains no expense data</td></tr>
     <tr><td>IP address</td><td>Your device's internet address when it connects</td><td>Processed by the sync relay when your phone connects; not stored with your data</td><td>Us, to deliver data and limit abuse</td></tr>
   </table></div>
@@ -63,7 +64,7 @@
 
 <h2>How sync works</h2>
   <ul>
-    <li><strong>End-to-end encrypted.</strong> Changes are encrypted on your phone before they are sent. Our relay, which runs on Cloudflare, stores only encrypted data and the usage counts described below. It cannot see names, amounts, groups or who wrote what. The one exception is email invites: see "Email invites" below.</li>
+    <li><strong>End-to-end encrypted.</strong> Changes are encrypted on your phone before they are sent. Our relay, which runs on Cloudflare, stores only encrypted data and the usage counts described below. It cannot see names, amounts or who wrote what. The exceptions are email invites and notification notes: see "Email invites" and "Notifications" below.</li>
     <li><strong>What the relay processes.</strong> As expected for a relay, it processes your device's IP address and device push token. The IP address is used to deliver data and for short, per-minute limits that stop floods of requests; the relay does not keep request logs or store IP addresses with your data. The push token is kept with the encrypted mailboxes you belong to so the relay can ping your phone, and is removed when you turn notifications off or the token stops working.</li>
     <li><strong>Usage counts.</strong> To protect the relay from abuse, it counts how much each sign-in pass writes in a day. A pass isn't linked to your account. The relay also counts how many passes each account requests in a day, and reduces that to totals when the day ends. Counts are deleted after 30 days.</li>
     <li><strong>Invite links and QR codes.</strong> In an open group, anyone with the link or QR code can join. With "Approve new members" on, people can only ask to join until a member approves them. Invite links open a page on our website, splitsama.app. The invite itself, which includes your name and the group's name, is in the part of the link that browsers do not send to any server, so the website never receives it.</li>
@@ -71,7 +72,7 @@
     <li><strong>Email invites.</strong> If you add a friend by email, your phone leaves an invite for them on the relay, so they can find you if they use SplitSama. The invite is encrypted, and contains what an invite link contains, including your name. The relay files it under a scrambled code made from the address, not the address itself, and deletes it after 14 days, or sooner if it's declined. Your friend's address is never used to contact them: we send no email.</li>
     <li><strong>Checking for email invites.</strong> While signed in, your phone checks for invites when the app opens, at most every 15 minutes while you use it, and when you pull to refresh, by sending your Google sign-in to the relay. The relay uses your address to find invites left for you and does not store it. It does not tell anyone whether an address uses SplitSama. Nothing is linked until you tap Accept. If you tap Decline, the invite is removed from the relay and the sender isn't told. The sender can send another invite after 14 days.</li>
     <li><strong>How email invites are protected.</strong> Email invites are designed to stay protected if the relay's stored data leaks, but not from the relay itself, because it sees your address when you check for invites.</li>
-    <li><strong>Notifications.</strong> When something changes, the relay sends your phone a ping with no content, through Expo and Google's push services. Your phone writes the notification text itself.</li>
+    <li><strong>Notifications.</strong> When you change something worth a notification, your phone also sends the relay a short note in plain text: what kind of change it was (such as a new expense, an edit or a payment), the group's name and the expense's title. It never contains names, amounts or comment text. On Android, the relay sends a ping with no content through Expo and Google's push services, and your phone writes the notification text itself. On iPhone, the relay writes the notification from the note, for example "Goa Trip: “Dinner” was added.", and sends it through Expo and Apple's push service, because iPhones rarely let an app write its own notification in the background. The relay keeps a note only until the notification is sent, usually under a minute.</li>
     <li><strong>Exchange rates and settings.</strong> The app downloads daily currency rates through our relay and app settings from Google Firebase. These requests send nothing about you or your expenses.</li>
     <li><strong>Network data.</strong> Like any internet service, Cloudflare, Google, Expo, RevenueCat and Sentry see your device's IP address when it connects. They handle it under their own privacy policies.</li>
   </ul>
@@ -101,8 +102,8 @@
   <div class="table-wrap"><table class="data">
     <tr><th>Service</th><th>What it receives</th><th>Purpose</th></tr>
     <tr><td>Google (Sign-In, Drive, Firebase)</td><td>Your sign-in; your encrypted backup; requests for app settings</td><td>Sign-in, backups and feature settings</td></tr>
-    <tr><td>Cloudflare</td><td>Encrypted sync data, email invites, backup-key requests, IP addresses and device push tokens</td><td>Running the sync relay</td></tr>
-    <tr><td>Expo and Google push services</td><td>Push token and content-free pings</td><td>Notifications</td></tr>
+    <tr><td>Cloudflare</td><td>Encrypted sync data, email invites, notification notes until sent, backup-key requests, IP addresses and device push tokens</td><td>Running the sync relay</td></tr>
+    <tr><td>Expo, Google and Apple push services</td><td>Push token; content-free pings, or on iPhone a notification with a group's name and an expense's title</td><td>Notifications</td></tr>
     <tr><td>RevenueCat and Google Play</td><td>Random customer ID, purchase and subscription status</td><td>SplitSama Pro purchases</td></tr>
     <tr><td>Sentry (stored in the EU)</td><td>Crash and error reports, cleaned on your phone first</td><td>Fixing bugs</td></tr>
   </table></div>
