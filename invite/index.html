@@ -44,7 +44,8 @@ small{color:var(--mute)}
     <a class="btn hide" id="open">Open invite in SplitSama</a>
     <a class="btn hide" id="store" href="https://play.google.com/store/apps/details?id=com.cadence.splitsama">Get SplitSama on Google Play</a>
     <p class="hide" id="again"><small>Don't have the app? This button takes you to Google Play. After installing, tap the link you were sent again.</small></p>
-    <p class="hide" id="iphone"><small>SplitSama is on Android for now, and iPhone is coming later. Keep this link for when it's ready.</small></p>
+    <a class="btn hide" id="appstore" href="https://apps.apple.com/app/id6835806086">Get SplitSama on the App Store</a>
+    <p class="hide" id="iphone"><small>Don't have the app? Get it from the App Store, then tap the link you were sent again.</small></p>
     <p class="hide" id="bad">This invite link is incomplete. Ask for a new one.</p>
   </div>
 </main>
@@ -79,10 +80,12 @@ small{color:var(--mute)}
     var open = document.getElementById('open');
     open.href = 'intent://invite?d=' + code + '#Intent;scheme=splitsama;package=com.cadence.splitsama;S.browser_fallback_url=' + encodeURIComponent(store) + ';end';
     show('open'); show('again');
-  } else if (/iPhone|iPad|iPod/i.test(ua)) {
-    show('iphone');
+  } else if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) {
+    // Opens the app if it's installed. Nothing leaves the phone.
+    document.getElementById('open').href = 'splitsama://invite?d=' + code;
+    show('open'); show('appstore'); show('iphone');
   } else {
-    show('store');
+    show('store'); show('appstore');
   }
 })();
 </script>

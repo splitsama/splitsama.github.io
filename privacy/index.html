@@ -32,13 +32,13 @@
 <header class="bar"><div class="wrap">
   <a class="brand" href="../" aria-label="Home"><img src="../assets/icon.png" alt="SplitSama split bills app icon" width="32" height="32">SplitSama</a>
   <nav class="nav" aria-label="Main"><a href="../how-it-works/">How It Works</a><a href="../features/">Features</a><a href="../pro/">Pro</a><a href="../about/">About</a></nav>
-  <a class="btn small" href="https://play.google.com/store/apps/details?id=com.cadence.splitsama">Get the app</a>
+  <a class="btn small" href="../#get">Get the app</a>
 </div></header>
 <main>
 <section class="page-head"><div class="wrap"><h1>Privacy Policy</h1><p class="lede">How SplitSama collects, uses and protects your information.</p><p class="updated">Last updated: 19 November 2026</p></div></section>
 <section class="block"><div class="wrap"><div class="prose legal">
 <h2>About this policy</h2>
-  <p>SplitSama has no ads, and your expenses are end-to-end encrypted: only the people you share them with can read them, not us. The one part that isn't is what an iPhone notification shows: a group's name and an expense's title (see "Notifications"). This policy explains what the SplitSama app for Android (app ID <code>com.cadence.splitsama</code>) collects, why, and the choices you have.</p>
+  <p>SplitSama has no ads, and your expenses are end-to-end encrypted: only the people you share them with can read them, not us. The one part that isn't is what an iPhone notification shows: a group's name and an expense's title (see "Notifications"). This policy explains what the SplitSama app for Android and iPhone (app ID <code>com.cadence.splitsama</code>) collects, why, and the choices you have.</p>
   <p>SplitSama is made by SplitSama, an independent developer ("we", "us"). Questions about privacy: <a href="mailto:splitsama@gmail.com">splitsama@gmail.com</a>.</p>
   <p>By using SplitSama you agree to this policy and to our <a href="../terms/">Terms of Service</a>.</p>
 
@@ -47,14 +47,15 @@
   <div class="table-wrap"><table class="data">
     <tr><th>Information</th><th>Examples</th><th>Where it is kept</th><th>Who can read it</th></tr>
     <tr><td>Google sign-in</td><td>Your Google email address, name and profile photo</td><td>Your phone. Your name and photo are used as your profile.</td><td>You; your name and photo are shown to people you share with</td></tr>
+    <tr><td>Sign in with Apple (iPhone)</td><td>The name Apple shares and, unless you hide it, your email address</td><td>Your phone. The relay checks Apple's sign-in and gives your phone a session that holds your email, used to check for email invites</td><td>You; your name is shown to people you share with</td></tr>
     <tr><td>Your profile</td><td>Your name, photo, and payment handles you add (such as UPI, PayPal, Venmo, Revolut or Cash App)</td><td>Your phone; encrypted copies on the sync relay and in your backup</td><td>You and the people you share groups or expenses with</td></tr>
     <tr><td>Friends you add</td><td>A friend's name and email address, typed or picked from your contacts</td><td>Your phone; encrypted copies on the sync relay and in your backup</td><td>You and the members of groups you share with them</td></tr>
-    <tr><td>Email invites</td><td>If you add a friend by email: a scrambled code made from their address, and an invite with your name</td><td>The sync relay, for up to 14 days</td><td>Your friend, after signing in with that Google account. See "Email invites"</td></tr>
+    <tr><td>Email invites</td><td>If you add a friend by email: a scrambled code made from their address, and an invite with your name</td><td>The sync relay, for up to 14 days</td><td>Your friend, after signing in with that email address. See "Email invites"</td></tr>
     <tr><td>Expenses and groups</td><td>Descriptions, amounts, currencies, categories, dates, notes, splits, items, settlements, budgets, trip dates, comments and change history</td><td>Your phone; encrypted copies on the sync relay and in your backup</td><td>Members of the group or the people in the expense</td></tr>
     <tr><td>Personal (self) expenses</td><td>Bills you track only for yourself</td><td>Your phone; encrypted copies for your own other phones and in your backup</td><td>Only you</td></tr>
     <tr><td>Device keys</td><td>A signing key, the keys for each group, and a list of your signed-in phones</td><td>Your phone (secure storage); encrypted in your backup</td><td>Only you</td></tr>
     <tr><td>Backup</td><td>An encrypted copy of your keys and data</td><td>Your own Google Drive, in a hidden app folder; or a backup file you save yourself</td><td>Only you (see "Backups")</td></tr>
-    <tr><td>Subscription status</td><td>Whether SplitSama Pro or a trip pass is active, renewal or end dates, a purchase reference, and a random customer ID</td><td>Google Play and RevenueCat</td><td>Us and RevenueCat, to unlock Pro. If you share Pro with a group or buy a trip pass for it, its members see that it came from you and until when.</td></tr>
+    <tr><td>Subscription status</td><td>Whether SplitSama Pro or a trip pass is active, renewal or end dates, a purchase reference, and a random customer ID</td><td>Google Play or the App Store, and RevenueCat</td><td>Us and RevenueCat, to unlock Pro. If you share Pro with a group or buy a trip pass for it, its members see that it came from you and until when.</td></tr>
     <tr><td>Crash reports</td><td>Error messages, app version, device model and operating system</td><td>Sentry</td><td>Us, to fix bugs</td></tr>
     <tr><td>Notification notes</td><td>For each change worth a notification: what kind it was (such as a new expense or a payment), the group's name and the expense's title. Never names, amounts or comment text</td><td>The sync relay, only until the notification is sent (usually under a minute)</td><td>Expo and Apple, to show the notification on iPhones in your groups</td></tr>
     <tr><td>Device push token</td><td>A token that lets your phone get a "something changed" ping</td><td>The sync relay and Expo's push service, until you turn notifications off or the token stops working</td><td>Us and Expo, to deliver pings; it contains no expense data</td></tr>
@@ -70,27 +71,28 @@
     <li><strong>Invite links and QR codes.</strong> In an open group, anyone with the link or QR code can join. With "Approve new members" on, people can only ask to join until a member approves them. Invite links open a page on our website, splitsama.app. The invite itself, which includes your name and the group's name, is in the part of the link that browsers do not send to any server, so the website never receives it.</li>
     <li><strong>Personal inboxes.</strong> Messages between people, such as non-group expenses, reminders and invitations, go to an encrypted inbox only the recipient can read. Inbox messages are deleted after 90 days.</li>
     <li><strong>Email invites.</strong> If you add a friend by email, your phone leaves an invite for them on the relay, so they can find you if they use SplitSama. The invite is encrypted, and contains what an invite link contains, including your name. The relay files it under a scrambled code made from the address, not the address itself, and deletes it after 14 days, or sooner if it's declined. Your friend's address is never used to contact them: we send no email.</li>
-    <li><strong>Checking for email invites.</strong> While signed in, your phone checks for invites when the app opens, at most every 15 minutes while you use it, and when you pull to refresh, by sending your Google sign-in to the relay. The relay uses your address to find invites left for you and does not store it. It does not tell anyone whether an address uses SplitSama. Nothing is linked until you tap Accept. If you tap Decline, the invite is removed from the relay and the sender isn't told. The sender can send another invite after 14 days.</li>
+    <li><strong>Checking for email invites.</strong> While signed in, your phone checks for invites when the app opens, at most every 15 minutes while you use it, and when you pull to refresh, by sending your Google sign-in, or your Sign in with Apple session, to the relay. The relay uses your address to find invites left for you and does not store it. It does not tell anyone whether an address uses SplitSama. Nothing is linked until you tap Accept. If you tap Decline, the invite is removed from the relay and the sender isn't told. The sender can send another invite after 14 days.</li>
     <li><strong>How email invites are protected.</strong> Email invites are designed to stay protected if the relay's stored data leaks, but not from the relay itself, because it sees your address when you check for invites.</li>
     <li><strong>Notifications.</strong> When you change something worth a notification, your phone also sends the relay a short note in plain text: what kind of change it was (such as a new expense, an edit or a payment), the group's name and the expense's title. It never contains names, amounts or comment text. On Android, the relay sends a ping with no content through Expo and Google's push services, and your phone writes the notification text itself. On iPhone, the relay writes the notification from the note, for example "Goa Trip: “Dinner” was added.", and sends it through Expo and Apple's push service, because iPhones rarely let an app write its own notification in the background. The relay keeps a note only until the notification is sent, usually under a minute.</li>
     <li><strong>Exchange rates and settings.</strong> The app downloads daily currency rates through our relay and app settings from Google Firebase. These requests send nothing about you or your expenses.</li>
-    <li><strong>Network data.</strong> Like any internet service, Cloudflare, Google, Expo, RevenueCat and Sentry see your device's IP address when it connects. They handle it under their own privacy policies.</li>
+    <li><strong>Network data.</strong> Like any internet service, Cloudflare, Google, Apple, Expo, RevenueCat and Sentry see your device's IP address when it connects. They handle it under their own privacy policies.</li>
   </ul>
 
 <h2>Backups</h2>
   <ul>
-    <li><strong>Google Drive.</strong> When you sign in with Google, SplitSama backs up an encrypted copy of your data to a hidden app folder in your own Google Drive every day. It only asks for access to that folder, not to your other Drive files.</li>
+    <li><strong>Google Drive.</strong> When you sign in with Google, or connect Google Drive after Sign in with Apple, SplitSama backs up an encrypted copy of your data to a hidden app folder in your own Google Drive every day. It only asks for access to that folder, not to your other Drive files.</li>
     <li><strong>How it is protected.</strong> The backup key is created by our relay from your verified Google sign-in, and nothing about it is stored per user. Google holds the encrypted backup but not the key, and our relay can make the key but never receives the backup, so neither can read it alone.</li>
+    <li><strong>Sign in with Apple without Drive.</strong> If you sign in with Apple and don't connect Google Drive, nothing is backed up automatically, and the app reminds you. You can still save a backup file.</li>
     <li><strong>Backup file.</strong> You can also save a backup file protected by a passphrase you choose. Nobody, including us, can recover a lost passphrase.</li>
   </ul>
 
 <h2>Permissions and features on your phone</h2>
   <ul>
     <li><strong>Camera.</strong> Used to scan invite QR codes and receipts.</li>
-    <li><strong>Microphone (Voice add and Ask Sama).</strong> SplitSama uses the microphone only while you tap the mic in Voice add or Ask Sama (Pro features). Your phone's own speech recognizer turns what you say into text: on the phone when it has your language installed, otherwise through your phone's speech service (on Android, Google's), under its own privacy policy. When it runs on the phone, the names of your friends and groups are given to it to help it spell them; they are never sent to the speech service. SplitSama never records, stores or uploads the audio.</li>
+    <li><strong>Microphone (Voice add and Ask Sama).</strong> SplitSama uses the microphone only while you tap the mic in Voice add or Ask Sama (Pro features). Your phone's own speech recognizer turns what you say into text: on the phone when it has your language installed, otherwise through your phone's speech service (on Android, Google's; on iPhone, Apple's), under its own privacy policy. When it runs on the phone, the names of your friends and groups are given to it to help it spell them; they are never sent to the speech service. SplitSama never records, stores or uploads the audio.</li>
     <li><strong>Ask Sama.</strong> Ask Sama works out its answers on your phone from the expenses already there. Your questions and its answers are not sent to us or to any AI service.</li>
     <li><strong>Photos.</strong> Used only when you pick a receipt image from your library.</li>
-    <li><strong>Receipts.</strong> A receipt is scanned and read on your phone (using Google's on-device document scanner and ML Kit); its amounts go into the expense and the photo is deleted. Receipt photos are never uploaded or stored.</li>
+    <li><strong>Receipts.</strong> A receipt is scanned and read on your phone (using Google's on-device document scanner and ML Kit on Android, or Apple's on-device scanner and text recognition on iPhone); its amounts go into the expense and the photo is deleted. Receipt photos are never uploaded or stored.</li>
     <li><strong>Home-screen widget.</strong> If you add the widget, it shows your own balance on your home screen, so anyone who can see your screen can see it. It is kept on your phone and updated from the app; nothing extra is sent anywhere.</li>
     <li><strong>Contacts.</strong> Used only when you tap "Choose from contacts", to read the one contact you pick. We never upload your contact list.</li>
     <li><strong>Messages you paste.</strong> When you paste a bank, card or UPI message to make an expense, it is read on your phone and not uploaded.</li>
@@ -103,26 +105,27 @@
     <tr><th>Service</th><th>What it receives</th><th>Purpose</th></tr>
     <tr><td>Google (Sign-In, Drive, Firebase)</td><td>Your sign-in; your encrypted backup; requests for app settings</td><td>Sign-in, backups and feature settings</td></tr>
     <tr><td>Cloudflare</td><td>Encrypted sync data, email invites, notification notes until sent, backup-key requests, IP addresses and device push tokens</td><td>Running the sync relay</td></tr>
+    <tr><td>Apple (Sign in with Apple)</td><td>Your sign-in, if you use Sign in with Apple</td><td>Signing in on iPhone</td></tr>
     <tr><td>Expo, Google and Apple push services</td><td>Push token; content-free pings, or on iPhone a notification with a group's name and an expense's title</td><td>Notifications</td></tr>
-    <tr><td>RevenueCat and Google Play</td><td>Random customer ID, purchase and subscription status</td><td>SplitSama Pro purchases</td></tr>
+    <tr><td>RevenueCat, Google Play and the App Store</td><td>Random customer ID, purchase and subscription status</td><td>SplitSama Pro purchases</td></tr>
     <tr><td>Sentry (stored in the EU)</td><td>Crash and error reports, cleaned on your phone first</td><td>Fixing bugs</td></tr>
   </table></div>
   <p>Crash reports never include your name, email, people, expense text, screenshots or screen recordings. You can turn crash reports off in Account.</p>
   <p>We may disclose information if required by law, to protect users' safety, or as part of a sale or transfer of the app, in which case this policy continues to apply.</p>
 
 <h2>Payments</h2>
-  <p>Settle-up buttons open your payment app (for example UPI or PayPal) with the details filled in. Payments happen in that app; SplitSama never sees or stores card or bank details. SplitSama Pro is paid through Google Play, which handles your payment details.</p>
+  <p>Settle-up buttons open your payment app (for example UPI or PayPal) with the details filled in. Payments happen in that app; SplitSama never sees or stores card or bank details. SplitSama Pro is paid through Google Play or the App Store, which handle your payment details.</p>
 
 <h2>Keeping and deleting your data</h2>
   <ul>
-    <li><strong>Delete your account.</strong> In Account, tap <strong>Delete my account</strong>. You leave every group (others see "Deleted user", and their balances stay correct), groups you own lose their owner so every remaining member can edit them, your Google Drive backup is deleted, SplitSama's access to your Google account is revoked, and the data and keys on this phone are erased. If you use other phones, sign them out first from Your devices. This cannot be undone.</li>
+    <li><strong>Delete your account.</strong> In Account, tap <strong>Delete my account</strong>. You leave every group (others see "Deleted user", and their balances stay correct), groups you own lose their owner so every remaining member can edit them, your Google Drive backup is deleted, SplitSama's access to your Google account is revoked (and Sign in with Apple, if you used it), and the data and keys on this phone are erased. If you use other phones, sign them out first from Your devices. This cannot be undone.</li>
     <li><strong>Log out or sign out a phone.</strong> Logging out erases SplitSama's data on that phone, and your backup stays in Drive. From Devices, you can sign out another of your phones; it erases its data the next time it connects.</li>
     <li><strong>On friends' phones.</strong> Expenses you shared stay on the phones of the people you shared them with, as in any shared ledger. You can delete expenses and comments you are part of. Deleting a group removes it for everyone in it.</li>
     <li><strong>On the relay.</strong> Encrypted group data stays on the relay so members, including new ones, can sync. If nobody uses a group for 12 months, its data is removed from the relay; members' phones still have it and send it again if the group is used later. Inbox messages expire after 90 days. We cannot read relay data or tell whose it is.</li>
     <li><strong>Email invites.</strong> Invites you leave are deleted from the relay after 14 days or when declined, including if you delete your account sooner.</li>
-    <li><strong>Subscription.</strong> Deleting your account does not cancel SplitSama Pro. Cancel it in Google Play; billing records are kept by Google as the law requires.</li>
+    <li><strong>Subscription.</strong> Deleting your account does not cancel SplitSama Pro. Cancel it in Google Play or in your Apple Account's subscriptions; billing records are kept by Google or Apple as the law requires.</li>
   </ul>
-  <p>Step-by-step instructions are on our <a href="../delete-account/">account deletion page</a>. If you can no longer open the app, email <a href="mailto:splitsama@gmail.com">splitsama@gmail.com</a> and we will help. You can also remove SplitSama's backup from Google Drive in Drive settings under Manage apps, and remove its access in your Google account settings.</p>
+  <p>Step-by-step instructions are on our <a href="../delete-account/">account deletion page</a>. If you can no longer open the app, email <a href="mailto:splitsama@gmail.com">splitsama@gmail.com</a> and we will help. You can also remove SplitSama's backup from Google Drive in Drive settings under Manage apps, and remove its access in your Google account settings. On iPhone, you can stop using Sign in with Apple in Settings &gt; your name &gt; Sign in with Apple.</p>
   <p>Depending on where you live, you may have the right to see, correct or delete your information, or to complain to a data protection authority. Contact us to use these rights.</p>
 
 <h2>Security, children and changes</h2>
